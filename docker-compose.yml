@@ -52,7 +52,7 @@ services:
       - mysql
 
   zabbix-agent:
-    image: zabbix/zabbix-agent:ubuntu-6.0-latest
+    image: zabbix/zabbix-agent:ubuntu-6.0.14
     container_name: zabbix_agent
     networks: 
       - vpcstack
