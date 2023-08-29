@@ -17,7 +17,7 @@ services:
   
   zabbix-server:
     container_name: zabbix-server
-    image: zabbix/zabbix-server-mysql:ubuntu-6.0.16
+    image: zabbix/zabbix-server-mysql
     networks:
       - vpcstack
     restart: always
@@ -35,7 +35,7 @@ services:
 
   zabbix-frontend:
     container_name: zabbix-frontend
-    image: zabbix/zabbix-web-apache-mysql:ubuntu-6.0.16
+    image: zabbix/zabbix-web-apache-mysql
     networks:
       - vpcstack
     restart: always
@@ -52,7 +52,7 @@ services:
       - mysql
 
   zabbix-agent:
-    image: zabbix/zabbix-agent:ubuntu-6.0-latest
+    image: zabbix/zabbix-agent
     container_name: zabbix_agent
     networks: 
       - vpcstack
