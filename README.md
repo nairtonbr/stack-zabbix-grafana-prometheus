@@ -1,2 +1,2 @@
-# stack-zabbix-grafana-prometheus(nova)
+# stack-zabbix-grafana-prometheus-nova
 Stack zabbix grafana prometheus
