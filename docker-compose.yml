@@ -108,12 +108,10 @@ services:
     environment:
       - GF_INSTALL_PLUGINS=alexanderzobnin-zabbix-app,raintank-worldping-app
     volumes:
-      - grafana-config:/etc/grafana:rw
-      - grafana-data:/var/lib/grafana:rw
-      - grafana-home:/usr/share/grafana:rw
+      - /srv/docker/grafana/data:/var/lib/grafana
     ports:
       - '8020:3000'
     depends_on:
       - server
-    networks:
-      - vpcstack
+#    networks:
+#      - vpcstack
