@@ -114,7 +114,6 @@ services:
     ports:
       - '8020:3000'
     depends_on:
-      - cadvisor
-      - zabbix-server
+      - server
     networks:
       - vpcstack
