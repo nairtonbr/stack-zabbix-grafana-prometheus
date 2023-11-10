@@ -2,7 +2,7 @@ version: '3'
 services:
   mysql:
     container_name: mysql
-    image: mysql:alpine-latest
+    image: mysql:ubuntu-latest
     networks:
       - vpcstack
     ports:
@@ -17,7 +17,7 @@ services:
   
   zabbix-server:
     container_name: zabbix-server
-    image: zabbix/zabbix-server-mysql:alpine-latest
+    image: zabbix/zabbix-server-mysql:ubuntu-latest
     networks:
       - vpcstack
     restart: always
@@ -35,7 +35,7 @@ services:
 
   zabbix-frontend:
     container_name: zabbix-frontend
-    image: zabbix/zabbix-web-apache-mysql:alpine-latest
+    image: zabbix/zabbix-web-apache-mysql:ubuntu-latest
     networks:
       - vpcstack
     restart: always
